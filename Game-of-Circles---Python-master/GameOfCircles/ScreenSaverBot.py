@@ -14,3 +14,5 @@ class ScreenSaverBot(Sprite):
             self.yspeed *= -1
         if self.x < 0 or self.x > width:
             self.xspeed *= -1
+            
+    
