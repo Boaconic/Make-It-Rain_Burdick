@@ -16,5 +16,5 @@ class ArmoredEnemy(Sprite):
             
     def handleCollision(self):
         self.w -= 2
-        if self.w < 0:
+        if self.w < 2:
             SpriteManager.destroy(self)
