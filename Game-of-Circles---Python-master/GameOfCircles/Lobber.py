@@ -11,6 +11,7 @@ class Lobber(Sprite):
     xspeed = 8
     diameter = 50
     c = color(0,0,255)
+    w = 1
 
     def move(self):
         vector = self.aim(SpriteManager.getPlayer())

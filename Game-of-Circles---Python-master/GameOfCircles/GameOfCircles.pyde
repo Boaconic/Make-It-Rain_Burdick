@@ -8,14 +8,17 @@ from Raindrop import Raindrop
 from JiggleBot import JiggleBot
 from ScreenSaverBot import ScreenSaverBot
 from Lobber import Lobber
+from Shooter import Shooter
+from ArmoredEnemy import ArmoredEnemy
+from ArmoredShooter import ArmoredShooter
 
 def setup():
     print "Built with Processing Python version " + platform.python_version()
     size(500, 500)
     player = Player(width / 2, height - 100, 1)
     SpriteManager.setPlayer(player)
-    SpriteManager.spawn(ScreenSaverBot(random(0, width), 50, 2))
-    SpriteManager.spawn(Lobber(random(0, width), 50, 2))
+    SpriteManager.spawn(Shooter(random(0, width), 50, 2))
+    SpriteManager.spawn(ArmoredShooter(random(0, width), 50, 2))
     
 def draw():
     background(255)    

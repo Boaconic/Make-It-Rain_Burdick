@@ -2,7 +2,7 @@ import SpriteManager
 
 class Sprite(object):
     diameter = 50
-    c = color
+    c = color(0, 255, 0)
     
     def __init__(self, x, y, team):
         self.x = x
@@ -14,6 +14,7 @@ class Sprite(object):
         
     def display(self):
         fill(self.c)
+        strokeWeight(self.w)
         ellipse(self.x, self.y, self.diameter, self.diameter)
         
     def animate(self):
