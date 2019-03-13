@@ -14,9 +14,11 @@ class Bullet(Sprite):
         self.vector = vector
         self.team = team
         
-        if self.x < -10 or self.x > width + 10 or self.y < -10 or self.y > height + 10:
-            SpriteManager.destroy(self)
-        
     def move(self):
         self.x += self.vector.x
         self.y += self.vector.y
+        
+    def isColliding(self, other):
+        r1 = self.diameter / 2.0
+        r2 = other.diameter / 2.0
+        return r1 + r2 > dist(self.x, self.y, other.x, other.y)

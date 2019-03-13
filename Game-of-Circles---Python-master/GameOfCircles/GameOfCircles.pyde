@@ -11,6 +11,8 @@ from Lobber import Lobber
 from Shooter import Shooter
 from ArmoredEnemy import ArmoredEnemy
 from ArmoredShooter import ArmoredShooter
+from ArmoredScreenSaverBot import ArmoredScreenSaverBot
+from ArmoredLobber import ArmoredLobber
 
 def setup():
     print "Built with Processing Python version " + platform.python_version()
@@ -18,7 +20,7 @@ def setup():
     player = Player(width / 2, height - 100, 1)
     SpriteManager.setPlayer(player)
     SpriteManager.spawn(Shooter(random(0, width), 50, 2))
-    SpriteManager.spawn(ArmoredShooter(random(0, width), 50, 2))
+    SpriteManager.spawn(ArmoredLobber(random(0, width), 50, 2))
     
 def draw():
     background(255)    

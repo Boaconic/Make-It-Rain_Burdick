@@ -3,9 +3,10 @@ from Sprite import Sprite
 
 class ArmoredEnemy(Sprite):
     
-    speed = 8
+    xspeed = 4
+    yspeed = 8
     diameter = 50
-    c = color(255,0,255)
+    c = color(0,0,255)
     
     w = 10
     
