@@ -1,5 +1,4 @@
 import SpriteManager
-from Sprite import Sprite
 from ArmoredEnemy import ArmoredEnemy
 from ScreenSaverBot import ScreenSaverBot
 

@@ -1,6 +1,7 @@
 import SpriteManager
 from Bullet import Bullet
 from Sprite import Sprite
+from PeaShooter import PeaShooter
 
 class Player(Sprite):
     
@@ -14,8 +15,10 @@ class Player(Sprite):
     c = color(255,0,0)
     w = 1
     
-    def handleCollision(self):
-        pass
+    #primaryWeapon
+    
+    #def handleCollision(self):
+        #pass
 
     def move(self):
         if self.left:
