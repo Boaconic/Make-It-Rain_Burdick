@@ -5,7 +5,7 @@ class Raindrop(Sprite):
     speed = 8
     diameter = 15
     c = color(0,0,255)
-    w = 1
+    w = 2
     
     def move(self):
         self.y += self.speed

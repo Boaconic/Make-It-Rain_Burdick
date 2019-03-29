@@ -13,9 +13,19 @@ class Player(Sprite):
     speed = 5
     diameter = 50
     c = color(255,0,0)
-    w = 1
+    w = 2
     
-    #primaryWeapon
+    
+    def __init__(self,x, y, team):
+        Sprite.__init__(self, x, y, team)
+        self.primaryWeapon = PeaShooter(self)
+        
+    def fire(self, vector = None):
+        if self.hostile:
+            if vector is None:
+                self.primaryWeapon.shoot(PVector(0, -10))
+            else:
+                    self.primaryWeapon.shoot(vector)
     
     #def handleCollision(self):
         #pass

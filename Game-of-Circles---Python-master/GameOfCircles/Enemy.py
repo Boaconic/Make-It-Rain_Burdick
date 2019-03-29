@@ -5,7 +5,7 @@ class Enemy(Sprite):
     speed = 8
     diameter = 50
     c = color(0,0,255)
-    w = 1
+    w = 2
 
     def move(self):
         self.x += self.speed

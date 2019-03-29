@@ -1,13 +1,20 @@
 import SpriteManager
+from Pea import Pea
 
 class PeaShooter:
-    wait = 1000
+    wait = 400
     mark = 0
+    cooldown = True
     
     def __init__(self, handler):
         self.handler = handler
         
     def shoot(self, vector):
-        if(millis)_ - self.mark > self.wait):
-            pea = Bullet(self.handler.x, self.handler.y, vector, self.handler.team)
+        if self.cooldown:
+            Pea = Pea(self.handler.x, self.handler.y, vector, self.handler.team)
             SpriteManager.spawn(pea)
+            self.cooldown = False
+            
+        if(millis) - self.mark > self.wait:
+            self.mark = millis()
+            self.cooldown = True

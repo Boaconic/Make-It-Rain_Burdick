@@ -24,7 +24,12 @@ class Sprite(object):
     def isColliding(self, other):
         r1 = self.diameter / 2.0
         r2 = other.diameter / 2.0
-        return r1 + r2 > dist(self.x, self.y, other.x, other.y)
+        if r1 + r2 > dist(self.x, self.y, other.x, other.y):
+            return True
+        else:
+            return False
     
     def handleCollision(self):
-        SpriteManager.destroy(self)
+        self.w -= 2
+        if self.w < 2:
+            SpriteManager.destroy(self)

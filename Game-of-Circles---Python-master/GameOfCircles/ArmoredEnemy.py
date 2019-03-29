@@ -3,8 +3,7 @@ from Sprite import Sprite
 
 class ArmoredEnemy(Sprite):
     
-    xspeed = 4
-    yspeed = 8
+    speed = 4
     diameter = 50
     c = color(0,0,255)
     
@@ -15,7 +14,6 @@ class ArmoredEnemy(Sprite):
         if self.x < 0 or self.x > width:
             self.speed *= -1
             
-    def handleCollision(self):
-        self.w -= 2
-        if self.w < 2:
-            SpriteManager.destroy(self)
+    #def handleCollision(self):
+        
+            #SpriteManager.destroy(self)

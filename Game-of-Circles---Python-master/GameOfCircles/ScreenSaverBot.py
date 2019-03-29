@@ -6,7 +6,7 @@ class ScreenSaverBot(Sprite):
     yspeed = 8
     diameter = 45
     c = color(0,100,255)
-    w = 1
+    w = 2
         
     def move(self):
         self.y += self.yspeed

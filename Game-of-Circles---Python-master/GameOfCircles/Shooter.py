@@ -5,7 +5,7 @@ from Sprite import Sprite
 class Shooter(Sprite):
     mark = 0
     wait = 700
-    w = 1
+    w = 2
     xspeed = 4
     yspeed = 8
     
