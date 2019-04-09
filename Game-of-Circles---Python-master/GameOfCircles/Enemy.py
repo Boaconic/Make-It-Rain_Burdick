@@ -1,6 +1,7 @@
 from Sprite import Sprite
+from playerMover import playerMover
 
-class Enemy(Sprite):
+class Enemy(playerMover):
     
     speed = 8
     diameter = 50
@@ -8,6 +9,7 @@ class Enemy(Sprite):
     w = 2
 
     def move(self):
+        
         self.x += self.speed
         if self.x < 0 or self.x > width:
             self.speed *= -1

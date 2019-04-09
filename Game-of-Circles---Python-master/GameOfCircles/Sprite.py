@@ -12,12 +12,16 @@ class Sprite(object):
     def move():
         pass
         
+    def playerMove():
+        pass
+        
     def display(self):
         fill(self.c)
         strokeWeight(self.w)
         ellipse(self.x, self.y, self.diameter, self.diameter)
         
     def animate(self):
+        self.playerMove()
         self.move()
         self.display()
         
