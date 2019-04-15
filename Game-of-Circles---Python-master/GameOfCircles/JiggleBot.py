@@ -12,3 +12,4 @@ class JiggleBot(Sprite):
         self.x += random(-self.speed, self.speed)
         self.y = constrain (self.y, 0, height)
         self.x = constrain (self.x, 0, width)
+        

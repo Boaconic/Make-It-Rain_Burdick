@@ -1,7 +1,6 @@
 from Sprite import Sprite
-from playerMover import playerMover
 
-class Enemy(playerMover):
+class Enemy(Sprite):
     
     speed = 8
     diameter = 50

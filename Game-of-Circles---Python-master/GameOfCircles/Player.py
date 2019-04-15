@@ -27,20 +27,29 @@ class Player(Sprite):
             else:
                     self.primaryWeapon.shoot(vector)
     
-    #def handleCollision(self):
-        #pass
+    def handleCollision(self):
+        pass
 
     def move(self):
-        pass
-    
-    def playerMover(self):
-        pass
+        
+        self.x = constrain(self.x, self.diameter / 2, width - self.diameter / 2)
+        self.y = constrain(self.y, self.diameter / 2, height - self.diameter / 2)
+        
+        if self.left:
+            self.x -= 5
+        if self.right:
+            self.x += 5
+        if self.up:
+            self.y -= 5
+        if self.down:
+            self.y += 5
         
     def keyDown(self):
+        
         if key == 'f' or key == 'F':
             SpriteManager.spawn(Bullet(self.x, self.y, PVector(0, -10), self.team))
     
-        'if keyCode == LEFT:
+        if keyCode == LEFT:
             self.left = True
         if keyCode == RIGHT:
             self.right = True
