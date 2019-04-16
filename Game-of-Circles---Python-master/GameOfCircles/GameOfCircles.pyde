@@ -14,7 +14,7 @@ from ArmoredShooter import ArmoredShooter
 from ArmoredScreenSaverBot import ArmoredScreenSaverBot
 from ArmoredLobber import ArmoredLobber
 from ArmoredJiggleBot import ArmoredJiggleBot
-#from PlayerMover import PlayerMover
+from Rocket import Rocket
 
 def setup():
     
@@ -37,10 +37,10 @@ def setup():
     size(500, 500)
     player = Player(width / 2, height / 2, 1)
     SpriteManager.setPlayer(player)
-    #SpriteManager.spawn(JiggleBot(random(0, width), 50, 2))
+    SpriteManager.spawn(Rocket(0, random(0, height), 2))
     
-    for i in range (0, enemyNumber):
-        SpriteManager.spawn(enemies[int(random(0, len(enemies)))](random(0, width), 50, 2))
+    #for i in range (0, enemyNumber):
+        #SpriteManager.spawn(enemies[int(random(0, len(enemies)))](random(0, width), 50, 2))
     
 def draw():
     background(255)    
