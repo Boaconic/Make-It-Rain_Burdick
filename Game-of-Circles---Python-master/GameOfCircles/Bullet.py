@@ -4,7 +4,8 @@ from BulletCollideTEST import BulletCollideTEST
 
 class Bullet(BulletCollideTEST):
     
-    diameter = 10
+    diameterX = 10
+    diameterY = 10
     c = color(0)
     
     w = 2
@@ -19,8 +20,7 @@ class Bullet(BulletCollideTEST):
         self.x += self.vector.x
         self.y += self.vector.y
         
-    #def PlayerMove(self):
-        if(self.x < 0 - self.diameter or self.x > width + self.diameter or self.y < 0 - self.diameter or self.y > height + self.diameter):
+        if(self.x < 0 - self.diameterX or self.x > width + self.diameterX or self.y < 0 - self.diameterY or self.y > height + self.diameterY):
             SpriteManager.destroy(self)
             
     def handleCollision(self):

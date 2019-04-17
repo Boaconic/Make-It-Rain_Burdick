@@ -1,16 +1,23 @@
 from Sprite import Sprite
+import SpriteManager
 
-def Rocket(Sprite):
+class Rocket(Sprite):
+    
+    mark = 0
+    wait = 1000
+    seconds =[1, 2, 3, 4]
+    diameterX = 75
+    diameterY = 25
+    c = color(255, 0, 125)
+    w = 2
+    xSpeed = random(0, 4)
+    ySpeed = random(-4, 4)
     
     def move(self):
-    
-    
-    
-    def aim(self, target):
-        distance = dist(target.x, target.y, self.x, self.y)
-        xComponent = target.x - self.x
-        yComponent = target.y - self.y
-        if distance == 0: 
-            distance = 0.01
-        magnitude = 7
-        return PVector(xComponent / distance * magnitude, yComponent / distance * magnitude)
+        
+        for x in self.seconds:
+            if millis() - self.mark < self.wait:
+                self.x += self.xSpeed
+                self.y += -self.ySpeed
+                self.mark += millis()
+            

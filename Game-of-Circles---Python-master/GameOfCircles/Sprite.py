@@ -1,7 +1,8 @@
 import SpriteManager
 
 class Sprite(object):
-    diameter = 50
+    diameterX = 50
+    diameterY = 50
     c = color(0, 255, 0)
     
     def __init__(self, x, y, team):
@@ -16,7 +17,7 @@ class Sprite(object):
     def display(self):
         fill(self.c)
         strokeWeight(self.w)
-        ellipse(self.x, self.y, self.diameter, self.diameter)
+        ellipse(self.x, self.y, self.diameterX, self.diameterY)
         
     def animate(self):
         
@@ -24,8 +25,8 @@ class Sprite(object):
         self.display()
         
     def isColliding(self, other):
-        r1 = self.diameter / 2.0
-        r2 = other.diameter / 2.0
+        r1 = self.diameterX / 2.0
+        r2 = other.diameterX / 2.0
         if r1 + r2 > dist(self.x, self.y, other.x, other.y):
             return True
         else:

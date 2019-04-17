@@ -8,6 +8,8 @@ class Shooter(Sprite):
     w = 2
     xspeed = 4
     yspeed = 8
+    diameterX = 50
+    diameterY = 50
     
     def move(self):
         self.y += self.yspeed

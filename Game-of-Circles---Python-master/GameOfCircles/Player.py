@@ -11,7 +11,8 @@ class Player(Sprite):
     up = False
     down = False
     speed = 5
-    diameter = 50
+    diameterX = 50
+    diameterY = 50
     c = color(255,0,0)
     w = 2
     
@@ -32,8 +33,8 @@ class Player(Sprite):
 
     def move(self):
         
-        self.x = constrain(self.x, self.diameter / 2, width - self.diameter / 2)
-        self.y = constrain(self.y, self.diameter / 2, height - self.diameter / 2)
+        self.x = constrain(self.x, self.diameterX / 2, width - self.diameterX / 2)
+        self.y = constrain(self.y, self.diameterY / 2, height - self.diameterY / 2)
         
         if self.left:
             self.x -= 5

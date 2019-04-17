@@ -4,7 +4,8 @@ from Sprite import Sprite
 class ArmoredEnemy(Sprite):
     
     speed = 4
-    diameter = 50
+    diameterX = 50
+    diameterY = 50
     c = color(0,0,255)
     
     w = 10

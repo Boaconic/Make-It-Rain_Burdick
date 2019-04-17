@@ -4,7 +4,8 @@ class ScreenSaverBot(Sprite):
     
     xspeed = 4
     yspeed = 8
-    diameter = 45
+    diameterX = 45
+    diameterY = 45
     c = color(0,100,255)
     w = 2
         

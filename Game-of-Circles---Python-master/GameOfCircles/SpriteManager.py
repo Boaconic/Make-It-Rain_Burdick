@@ -3,6 +3,7 @@ destroyed = []
 
 playerTeam = 1
 enemyTeam = 2
+neitherTeam = 3
 
 def setPlayer(playerInstance):
     global player

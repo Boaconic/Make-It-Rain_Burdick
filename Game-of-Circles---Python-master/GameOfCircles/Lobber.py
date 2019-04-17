@@ -9,7 +9,8 @@ class Lobber(Sprite):
 
     yspeed = 4
     xspeed = 8
-    diameter = 50
+    diameterX = 50
+    diameterY = 50
     c = color(0,0,255)
     w = 2
 

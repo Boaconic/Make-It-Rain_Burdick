@@ -3,7 +3,8 @@ from Sprite import Sprite
 class Enemy(Sprite):
     
     speed = 8
-    diameter = 50
+    diameterX = 50
+    diameterY = 50
     c = color(0,0,255)
     w = 2
 
