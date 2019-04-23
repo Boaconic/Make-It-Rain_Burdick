@@ -5,9 +5,9 @@ class Grenade(Sprite):
     
     expandSize = 1
     mark = 0
+    mark2 = 0
     wait = 1000
     waitTotal = 5000
-    explodeTime = 1000
     diameterX = 50
     diameterY = 50
     c = color(255, 0, 125)
@@ -30,13 +30,17 @@ class Grenade(Sprite):
             
     def handleCollision(self):
         
-        self.w -= 2
-        if self.w < 2:
-            self.explode()
-        elif self.control() == True:
-            self.explode()
-        else:
-            pass
+        while 1 == 1:
+            self.w -= 2
+            if self.w < 2:
+                self.waitTotal = millis()
+                self.explode()
+                break
+            elif self.control() == True:
+                self.explode()
+                break
+            else:
+                pass
         
     
     def control(self):
@@ -56,17 +60,13 @@ class Grenade(Sprite):
         
         self.w = 2
         
-        self.diameterX += 1
-        self.diameterY += 1
+        self.diameterX += 10
+        self.diameterY += 10
         self.xSpeed = 0
         self.ySpeed = 0
         self.c = color(255, 165, 0)
         
-        if millis() - self.waitTotal < self.explodeTime:
-            
-            self.diameterX += self.expandSize
-            self.diameterY += self.expandSize
-            
+        if self.diameterX < 200:
+            pass
         else:
-            
             SpriteManager.destroy(self)

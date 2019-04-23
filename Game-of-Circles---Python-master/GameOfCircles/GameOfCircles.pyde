@@ -18,6 +18,9 @@ from Grenade import Grenade
 
 def setup():
     
+    mark3 = 0
+    wait3 = 10000
+    
     enemyNumber = int(random(1,5))
     
     a = Enemy
@@ -36,12 +39,14 @@ def setup():
     print "Built with Processing Python version " + platform.python_version()
     size(500, 500)
     player = Player(width / 2, height / 2, 1)
-    #SpriteManager.setPlayer(player)
-    SpriteManager.spawn(ScreenSaverBot(random(0, height), 50, 2))
+    SpriteManager.setPlayer(player)
+    #SpriteManager.spawn(ScreenSaverBot(random(0, height), 50, 2))
     SpriteManager.spawn(Grenade(0, random(0, height), 3))
+        
     
-    #for i in range (0, enemyNumber):
-        #SpriteManager.spawn(enemies[int(random(0, len(enemies)))](random(0, width), 50, 2))
+    
+    for i in range (0, enemyNumber):
+        SpriteManager.spawn(enemies[int(random(0, len(enemies)))](random(0, width), 50, 2))
     
 def draw():
     background(255)    
