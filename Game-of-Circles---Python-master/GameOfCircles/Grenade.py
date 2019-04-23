@@ -1,13 +1,15 @@
 from Sprite import Sprite
 import SpriteManager
 
-class Rocket(Sprite):
+class Grenade(Sprite):
     
+    expandSize = 1
     mark = 0
     wait = 1000
-    waitTotal = 4000
-    diameterX = 75
-    diameterY = 25
+    waitTotal = 5000
+    explodeTime = 1000
+    diameterX = 50
+    diameterY = 50
     c = color(255, 0, 125)
     w = 2
     xSpeed = random(0, 2)
@@ -27,14 +29,18 @@ class Rocket(Sprite):
             self.explode()
             
     def handleCollision(self):
-        if self.control() == True:
-            self.explode
+        
+        self.w -= 2
+        if self.w < 2:
+            self.explode()
+        elif self.control() == True:
+            self.explode()
         else:
             pass
         
     
     def control(self):
-         
+        
         if millis() < self.waitTotal:
             return True
         else:
@@ -48,8 +54,19 @@ class Rocket(Sprite):
     
     def explode(self):
         
-        self.diameterX = 25
-        self.diameterY = 25
+        self.w = 2
+        
+        self.diameterX += 1
+        self.diameterY += 1
         self.xSpeed = 0
         self.ySpeed = 0
         self.c = color(255, 165, 0)
+        
+        if millis() - self.waitTotal < self.explodeTime:
+            
+            self.diameterX += self.expandSize
+            self.diameterY += self.expandSize
+            
+        else:
+            
+            SpriteManager.destroy(self)
