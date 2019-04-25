@@ -18,8 +18,8 @@ from Grenade import Grenade
 
 def setup():
     
-    mark3 = 0
-    wait3 = 10000
+    mark = 0
+    wait = 10000
     
     enemyNumber = int(random(1,5))
     

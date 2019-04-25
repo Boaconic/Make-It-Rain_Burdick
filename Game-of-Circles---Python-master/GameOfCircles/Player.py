@@ -28,8 +28,8 @@ class Player(Sprite):
             else:
                     self.primaryWeapon.shoot(vector)
     
-    def handleCollision(self):
-        pass
+    #def handleCollision(self):
+    #    pass
 
     def move(self):
         
